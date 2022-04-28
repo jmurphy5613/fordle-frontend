@@ -13,14 +13,21 @@ function GameOver() {
   } = useContext(AppContext);
   return (
     <div className="gameOver">
-      <h3>
+      <h3 style={{
+        color: gameOver.guessedWord ? "green" : "red",
+        fontFamily: "Inter, sans-serif",
+      }}>
         {gameOver.guessedWord
-          ? "You Correctly Guessed the Wordle"
+          ? `You Correctly Guessed the Fordle`
           : "You Failed to Guess the Word"}
       </h3>
-      <h1>Correct Word: {correctWord}</h1>
+      <h1 style={{
+        fontFamily: "Inter, sans-serif",
+      }}>Correct Word: {correctWord}</h1>
       {gameOver.guessedWord && (
-        <h3>You guessed in {currAttempt.attempt} attempts</h3>
+        <h3 style={{
+          fontFamily: "Inter, sans-serif",
+        }}>You guessed in {currAttempt.attempt} attempts</h3>
       )}
     </div>
   );

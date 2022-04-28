@@ -12,15 +12,15 @@ function App() {
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letter: 0 });
   const [wordSet, setWordSet] = useState(new Set());
-  const [correctWord, setCorrectWord] = useState("arise");
+  const [correctWord, setCorrectWord] = useState("");
   const [disabledLetters, setDisabledLetters] = useState([]);
   const [gameOver, setGameOver] = useState({
     gameOver: false,
     guessedWord: false,
   });
 
-  useEffect(() => {
-    generateWordSet().then((words) => {
+  useEffect(async () => {
+    await generateWordSet().then((words) => {
       setWordSet(words.wordSet);
       setCorrectWord(words.todaysWord);
     });
@@ -38,8 +38,7 @@ function App() {
     } else {
       alert("Word not found");
     }
-
-    if (currWord === correctWord) {
+    if (currWord.toLowerCase() === correctWord) {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
@@ -72,7 +71,9 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <h1>Fordle</h1>
+        <h1 style={{
+          marginTop: "0.7rem"
+        }}>Fordle</h1>
         <Creators />
       </nav>
       <AppContext.Provider
