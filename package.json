@@ -1,6 +1,5 @@
 {
   "name": "fordle",
-  "homepage": "https://fordle.live/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
