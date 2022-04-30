@@ -14,7 +14,7 @@ export const generateWordSet = async () => {
   let wordSet;
   let todaysWord;
 
-  await axios.get('http://localhost:3001/words/currentWord').then(res => {
+  await axios.get('https://fordle.herokuapp.com/words/currentWord').then(res => {
     todaysWord = res.data.word;
   });
 
