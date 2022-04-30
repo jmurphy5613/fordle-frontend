@@ -22,6 +22,7 @@ export const generateWordSet = async () => {
   await fetch(wordBank)
     .then((response) => response.text())
     .then((result) => {
+      console.log(result);
       const wordArr = result.split("\r\n")
       wordSet = new Set(wordArr);
     });
