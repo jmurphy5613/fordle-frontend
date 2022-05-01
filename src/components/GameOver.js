@@ -18,8 +18,8 @@ function GameOver() {
         fontFamily: "Inter, sans-serif",
       }}>
         {gameOver.guessedWord
-          ? `You Correctly Guessed the Fordle`
-          : "You Failed to Guess the Word"}
+          ? `You correctly guessed the Fordle`
+          : "You failed to guess the word"}
       </h3>
       <h1 style={{
         fontFamily: "Inter, sans-serif",

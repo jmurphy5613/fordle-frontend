@@ -37,7 +37,7 @@ nav h1 {
 
 .board {
   width: 450px;
-  height: 550px;
+  height: 650px;
   display: flex;
   flex-direction: column;
 }
@@ -46,13 +46,13 @@ nav h1 {
   flex: 33%;
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 7px 7px 7px 7px;
 }
 
 .letter {
   flex: 33%;
   height: 100%;
-  border: 1px solid grey;
+  border: 3px solid #3a3a3c;
   margin: 5px;
   display: grid;
   place-items: center;
@@ -86,21 +86,18 @@ nav h1 {
   flex-direction: row;
   display: flex;
   justify-content: center;
-  margin: 5px;
 }
 .line2 {
   flex: 33%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 5px;
 }
 .line3 {
   flex: 33%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 5px;
 }
 
 .key {
